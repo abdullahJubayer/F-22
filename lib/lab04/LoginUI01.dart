@@ -111,6 +111,7 @@ class LoginUI01 extends StatelessWidget {
         ),
       ),
       child: TextField(
+        textAlign: TextAlign.left,
         style: GoogleFonts.inter(
           fontSize: 16.0,
           color: Color(0xFF000000),
@@ -119,7 +120,7 @@ class LoginUI01 extends StatelessWidget {
         obscureText: obscureText,
         cursorColor: const Color(0xFF15224F),
         decoration: InputDecoration(
-            label: Text(txt),
+            hintText: txt,
             labelStyle: GoogleFonts.inter(
               fontSize: 12.0,
               color: Color(0xFF969AA8),

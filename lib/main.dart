@@ -13,6 +13,6 @@ class StartPoint extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return StackView();
+    return Lab04();
   }
 }
