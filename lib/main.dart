@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_22/notification/NotificationScreen.dart';
 import 'Lab03.dart';
 import 'lab04/Info.dart';
 import 'lab04/Lab04.dart';
@@ -12,6 +13,6 @@ class StartPoint extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return HospitalInfo();
+    return NotificationScreen();
   }
 }
