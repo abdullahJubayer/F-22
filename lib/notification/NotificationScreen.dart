@@ -13,36 +13,24 @@ class _NotificationScreenState extends State<NotificationScreen> {
     return MaterialApp(
       home: Scaffold(
         body: SafeArea(
-          child: Card(
-            shadowColor: Colors.black,
-            elevation: 50,
-            shape: const RoundedRectangleBorder(
-              side: BorderSide(color: Colors.white70, width: 1),
-              borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(16),
-                  topRight: Radius.circular(16),
-                  bottomLeft: Radius.zero,
-                  bottomRight: Radius.zero),
-            ),
-            child: Column(
-              children: [
-                const Header(),
-                Container(
-                  height: 2,
-                  color: const Color(0xFFE6E9ED),
+          child: Column(
+            children: [
+              const Header(),
+              Container(
+                height: 2,
+                color: const Color(0xFFE6E9ED),
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              Expanded(
+                child: ListView.builder(
+                  itemBuilder: (context, position) {
+                    return const ListItem();
+                  },
                 ),
-                const SizedBox(
-                  height: 15,
-                ),
-                Expanded(
-                  child: ListView.builder(
-                    itemBuilder: (context, position) {
-                      return const ListItem();
-                    },
-                  ),
-                )
-              ],
-            ),
+              )
+            ],
           ),
         ),
       ),
@@ -58,7 +46,8 @@ class Header extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.only(left: 0,top: 35,right: 20,bottom: 20),
+          padding:
+              const EdgeInsets.only(left: 0, top: 35, right: 20, bottom: 20),
           child: Row(
             children: [
               const Expanded(
@@ -141,16 +130,19 @@ class ListItem extends StatelessWidget {
                         )
                       ],
                     ),
-                    const Padding(
-                      padding: EdgeInsets.symmetric(vertical: 8),
-                      child: Text(
-                        "Lorem ipsum dolor sit amet cosectures adipsing chalengge",
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w400,
-                        ),
+                    const SizedBox(
+                      height: 8,
+                    ),
+                    const Text(
+                      "Lorem ipsum dolor sit amet cosectures adipsing chalengge",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
                       ),
+                    ),
+                    const SizedBox(
+                      height: 20,
                     ),
                   ],
                 ),
